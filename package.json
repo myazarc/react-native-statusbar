@@ -1,6 +1,6 @@
 {
   "name": "react-native-statusbar",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Change the statusbar color. Android",
   "main": "index.js",
   "scripts": {
