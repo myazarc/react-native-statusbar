@@ -1,4 +1,4 @@
-package mycstatusbar.myazarc.com.mycstatusbar;
+package com.myazarc.mycstatusbar;
 
 import android.app.Activity;
 import android.graphics.Color;
@@ -25,21 +25,29 @@ public class MYCStatusbar extends ReactContextBaseJavaModule {
     }
 
     @ReactMethod
-    public void setColor(String colorHex){
+    public void setColor(final String colorHex){
         if (android.os.Build.VERSION.SDK_INT >= 21) {
+		
             final Activity activity = getCurrentActivity();
             if (activity != null) {
-                Window window = activity.getWindow();
+                activity.runOnUiThread(new Runnable() {
+                    @Override
+                    public void run() {
+                        Window window = activity.getWindow();
 
 
-                window.clearFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
+                        window.clearFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
 
-                window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
+                        window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
 
+                        final int color=Color.parseColor(colorHex);
 
-                window.setStatusBarColor(Color.parseColor(colorHex));
+                        window.setStatusBarColor(color);
+                    }
+                });
             }
         }
     }
 
 }
+

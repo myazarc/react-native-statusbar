@@ -1,4 +1,4 @@
-package mycstatusbar.myazarc.com.mycstatusbar;
+package com.myazarc.mycstatusbar;
 
 import com.facebook.react.ReactPackage;
 import com.facebook.react.bridge.JavaScriptModule;
