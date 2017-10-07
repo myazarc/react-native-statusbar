@@ -1,0 +1,24 @@
+{
+  "name": "react-native-statusbar",
+  "version": "1.0.0",
+  "description": "Change the statusbar color. Android",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/myazarc/react-native-statusbar.git"
+  },
+  "keywords": [
+    "statusbar",
+    "change",
+    "color"
+  ],
+  "author": "Mustafa Yazar",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/myazarc/react-native-statusbar/issues"
+  },
+  "homepage": "https://github.com/myazarc/react-native-statusbar#readme"
+}
